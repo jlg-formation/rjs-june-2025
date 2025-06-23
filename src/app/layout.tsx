@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +25,32 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col justify-between min-h-screen`}
       >
-        {children}
+        <header className="bg-gray-50 h-12 flex items-center">
+          <Link
+            href="/"
+            className="flex items-center gap-2 px-2 font-bold text-lg hover:underline"
+          >
+            <Image
+              className="h-8"
+              src="/logo.svg"
+              alt="Logo Gestion Stock"
+              width={32}
+              height={32}
+              priority
+            />
+            <span>Gestion Stock</span>
+          </Link>
+        </header>
+        <div className="flex-grow flex flex-col">{children}</div>
+        <footer className="bg-gray-50 h-12 flex items-center justify-center">
+          <Link href="/legal" className="hover:underline">
+            Mentions Légales
+          </Link>
+        </footer>
       </body>
     </html>
   );
