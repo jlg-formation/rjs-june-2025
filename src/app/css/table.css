@@ -1,0 +1,30 @@
+@utility table {
+  @apply border-jlg-300 border-2;
+  @apply border-separate border-spacing-0 overflow-hidden rounded;
+
+  td,
+  th {
+    @apply px-4 py-2;
+  }
+
+  thead {
+    @apply bg-jlg-300;
+  }
+
+  tbody {
+    @apply cursor-pointer;
+    tr {
+      &:nth-child(even) {
+        @apply bg-jlg-50;
+      }
+
+      &:hover {
+        @apply bg-jlg-100;
+      }
+
+      &.selected {
+        @apply bg-jlg-200;
+      }
+    }
+  }
+}

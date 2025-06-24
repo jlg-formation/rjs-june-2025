@@ -27,12 +27,12 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col justify-between min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col justify-between antialiased`}
       >
-        <header className="bg-gray-50 h-12 flex items-center">
+        <header className="bg-jlg-50 flex h-12 items-center">
           <Link
             href="/"
-            className="flex items-center gap-2 px-2 font-bold text-lg hover:underline"
+            className="flex items-center gap-2 px-2 text-lg font-bold hover:underline"
           >
             <Image
               className="h-8"
@@ -45,8 +45,8 @@ export default function RootLayout({
             <span>Gestion Stock</span>
           </Link>
         </header>
-        <div className="flex-grow flex flex-col">{children}</div>
-        <footer className="bg-gray-50 h-12 flex items-center justify-center">
+        <div className="flex flex-grow flex-col">{children}</div>
+        <footer className="bg-jlg-50 flex h-12 items-center justify-center">
           <Link href="/legal" className="hover:underline">
             Mentions Légales
           </Link>
