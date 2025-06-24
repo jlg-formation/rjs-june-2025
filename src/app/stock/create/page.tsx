@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function StockCreate() {
   return (
-    <main>
-      <h1>Ajout d'un article</h1>
-      <form>
+    <main className="main">
+      <h1 className="title">Ajout d'un article</h1>
+      <form className="form">
         <label>
           <span>Nom</span>
           <input type="text" />
@@ -21,7 +21,7 @@ export default function StockCreate() {
           <span className="error"></span>
         </label>
         <div className="error"></div>
-        <button>Ajouter</button>
+        <button className="btn btn-primary">Ajouter</button>
       </form>
     </main>
   );
