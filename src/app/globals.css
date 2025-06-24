@@ -1,28 +1,20 @@
 @import "tailwindcss";
 
+@import "./css/colors.css";
 @import "./css/button.css";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@import "./css/table.css";
+@import "./css/form.css";
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background: var(--color-jlg);
+  color: var(--color-jlg-900);
+}
+
+@utility title {
+  @apply my-6 text-center text-3xl font-bold;
+}
+
+@utility main {
+  @apply mx-auto flex w-full max-w-3xl flex-col items-center p-2;
 }

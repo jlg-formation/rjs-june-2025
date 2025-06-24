@@ -1,13 +1,16 @@
 @utility btn {
-  @apply border border-gray-50 bg-gray-50 px-4 py-2;
-  @apply hover:border-gray-100 hover:bg-gray-100;
-  @apply active:border-gray-200 active:bg-gray-200;
-  @apply rounded;
-  @apply flex items-center justify-center gap-2;
+  @apply cursor-pointer;
+  @apply border-jlg-50 bg-jlg-50 rounded border px-4 py-2;
+  @apply hover:bg-jlg-100 hover:border-jlg-100;
+  @apply active:bg-jlg-200 active:border-jlg-200;
+  @apply inline-flex items-center justify-center gap-2;
+  @apply disabled:bg-jlg-50 disabled:border-jlg-50 disabled:cursor-not-allowed;
+  @apply hover:disabled:bg-jlg-50 hover:disabled:border-jlg-50 hover:disabled:cursor-not-allowed;
 }
 
 @utility btn-primary {
-  @apply border-gray-900 bg-gray-900 text-white;
-  @apply hover:border-gray-800 hover:bg-gray-800;
-  @apply active:border-gray-700 active:bg-gray-700;
+  @apply text-jlg-50;
+  @apply border-jlg-900 bg-jlg-900;
+  @apply hover:bg-jlg-800 hover:border-jlg-800;
+  @apply active:bg-jlg-700 active:border-jlg-700;
 }
