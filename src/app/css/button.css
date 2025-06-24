@@ -1,0 +1,13 @@
+@utility btn {
+  @apply border border-gray-50 bg-gray-50 px-4 py-2;
+  @apply hover:border-gray-100 hover:bg-gray-100;
+  @apply active:border-gray-200 active:bg-gray-200;
+  @apply rounded;
+  @apply flex items-center justify-center gap-2;
+}
+
+@utility btn-primary {
+  @apply border-gray-900 bg-gray-900 text-white;
+  @apply hover:border-gray-800 hover:bg-gray-800;
+  @apply active:border-gray-700 active:bg-gray-700;
+}
