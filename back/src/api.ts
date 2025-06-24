@@ -21,7 +21,7 @@ const date = (req: Request, res: Response) => {
 app.get("/date", date);
 
 app.use(async (req, res, next) => {
-  await sleep(1000);
+  await sleep(150);
   next();
 });
 

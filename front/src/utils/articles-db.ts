@@ -6,7 +6,7 @@ import { sleep } from "./sleep";
 const url = process.env.BACKEND_URL || "http://localhost:3333/api/articles";
 
 export const getArticles = async () => {
-  await sleep(2000);
+  await sleep(300);
   console.log("url: ", url);
   const response = await fetch(url, {
     cache: "no-store",
@@ -16,7 +16,7 @@ export const getArticles = async () => {
 };
 
 export const addArticle = async (newArticle: NewArticle) => {
-  await sleep(2000);
+  await sleep(300);
   await fetch(url, {
     method: "POST",
     body: JSON.stringify(newArticle),
