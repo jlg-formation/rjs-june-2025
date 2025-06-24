@@ -1,8 +1,12 @@
+import { getArticles } from "@/utils/articles-db";
 import { ArrowPathIcon, PlusIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 export default async function Stock() {
   console.log("Rendering Stock");
+
+  const articles = await getArticles();
+  console.log("xxx articles: ", articles);
   return (
     <main className="main">
       <h1 className="title">Liste des articles</h1>
@@ -25,11 +29,13 @@ export default async function Stock() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="name">xxx</td>
-              <td className="price">1.23 €</td>
-              <td className="qty">12</td>
-            </tr>
+            {articles.map((a) => (
+              <tr key={a.id}>
+                <td className="name">{a.name}</td>
+                <td className="price">1.23 €</td>
+                <td className="qty">12</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
